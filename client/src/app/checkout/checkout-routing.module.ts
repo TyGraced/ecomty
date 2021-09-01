@@ -5,7 +5,7 @@ import { CheckoutComponent } from './checkout.component';
 import { CheckoutSuccessComponent } from './checkout-success/checkout-success.component';
 
 const routes: Routes = [
-  {path: '', component: CheckoutComponent}, 
+  {path: '', component: CheckoutComponent},
   {path: 'success', component: CheckoutSuccessComponent}
 ]
 
@@ -17,3 +17,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class CheckoutRoutingModule { }
+  
