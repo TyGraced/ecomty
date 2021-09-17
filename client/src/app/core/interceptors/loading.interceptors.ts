@@ -12,12 +12,15 @@ constructor(private busyService: BusyService) {}
     if (req.method === 'POST' && req.url.includes('orders')) {
       return next.handle(req);
     }
+    if (req.method === 'DELETE') {
+      return next.handle(req);
+    }
     if (req.url.includes('emailexists')){
       return next.handle(req);
     }
     this.busyService.busy();
     return next.handle(req).pipe(
-      delay(1000),
+      //delay(1000),
       finalize(() => {
         this.busyService.idle();
       })

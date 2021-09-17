@@ -12,6 +12,7 @@
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.1.4"/>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\**" CopyToPublishDirectory="PreserveNewest" />
     <ProjectReference Include="..\Infrastructure\Infrastructure.csproj"/>
   </ItemGroup>
 </Project>
